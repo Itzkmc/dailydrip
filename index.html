@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Drip - Your Everyday Style</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="banner">
+      <h1>Daily Drip</h1>
+      <p>Your Everyday Style</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="products">
+      <h2>Our Textiles</h2>
+      <div class="grid">
+        <div class="product">
+          <img src="images/ankara.jpg" alt="Ankara">
+          <h3>Ankara</h3>
+          <p>₦12,000</p>
+          <button onclick="addToCart('Ankara', 12000)">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="images/silk.jpg" alt="Silk">
+          <h3>Silk</h3>
+          <p>₦18,000</p>
+          <button onclick="addToCart('Silk', 18000)">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="images/cotton.jpg" alt="Cotton">
+          <h3>Cotton</h3>
+          <p>₦9,500</p>
+          <button onclick="addToCart('Cotton', 9500)">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="images/brocade.jpg" alt="Brocade">
+          <h3>Brocade</h3>
+          <p>₦15,000</p>
+          <button onclick="addToCart('Brocade', 15000)">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="cart">
+      <h2>Shopping Cart</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: ₦<span id="cart-total">0</span></p>
+      <button onclick="checkout()">Checkout</button>
+    </section>
+
+    <section class="contact">
+      <h2>Contact Us</h2>
+      <p>📞 +234 902 059 4981‬</p>
+      <p>📧 <a href="mailto:dailydripstyle@outlook.com">dailydripstyle@outlook.com</a></p>
+      <p>📸 Instagram: <a href="https://instagram.com/daily_drip_style" target="_blank">@daily_drip_style</a></p>
+
+      <form action="https://formspree.io/f/mzzpbkkr" method="POST">
+        <label>Name:</label>
+        <input type="text" name="name" required>
+        <label>Email:</label>
+        <input type="email" name="email" required>
+        <label>Message:</label>
+        <textarea name="message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
